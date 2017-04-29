@@ -1,11 +1,25 @@
 from mongo import Mongo
 from mrjob.job import MRJob
+from pymongo import MongoClient
 import re
 import os
 import collections
 
 MONGO_SERVER = os.environ.get('MONGO_SERVER')
 MONGO_SERVER_PORT = int(os.environ.get('MONGO_SERVER_PORT'))
+
+class DB():
+    def __init__(self):
+        self.client = MongoClient (MONGO_SERVER, MONGO_SERVER_PORT)
+        self.db = self.client ["Test"]
+        self.index = self.db ["index"]
+
+    def insert(self, word, file_paths):
+    self.indexes.insert_one({"_id": word, "file_paths": file_paths})
+
+    def search(self, word):
+    return self.indexes.find_one({"_id": word})
+
 
 WORD_RE = re.compile(r"[\w*]+")
 
