@@ -48,9 +48,9 @@ $hdfs dfs -copyFromLocal /home/cmunozf/dataset/*.txt hdfs:/user/cmunozf/data_in/
 
 -Se ejecuta el wordCount en el dataset que esta en hdfs
 ```
-$python <direccion fichero> hdfs:/<direccion donde estan los datos>/*.txt -r hadoop --output-dir hdfs:/<directorio salida de lso datos>
+$python <direccion fichero> hdfs:/<direccion donde estan los datos>/*.txt -r hadoop --output-dir hdfs:/<directorio salida de los datos>
 ```
 Ejemplo:
 ```
-$python topicosTelematica-algoritmo/invertedIndex.py hdfs:/user/cmunozf/data_in/*.txt -r hadoop --output-dir hdfs:/user/cmunozf/data_out/out6
+$python umbrella/wordcount.py hdfs:/user/cmunozf/data_in/*.txt -r hadoop --output-dir hdfs:/user/cmunozf/data_out/out6
 ```
