@@ -1,11 +1,10 @@
 from mongo import Mongo
 from mrjob.job import MRJob
-from mrjob.step import MRStep
 import re
 import os
 import collections
 
-WORD_RE = re.compile(r"[\w*]+", re.MULTILINE)
+WORD_RE = re.compile(r"[\w*]+")
 
 class MRWordFrequencyCount(MRJob):
 
@@ -41,7 +40,7 @@ class MRWordFrequencyCount(MRJob):
 		break
 	    index+=1;
 
-        yield (word, P)
+        yield (word, top10)
 
 
 if __name__ == '__main__':
