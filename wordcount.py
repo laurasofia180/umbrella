@@ -1,10 +1,14 @@
 from mongo import Mongo
 from mrjob.job import MRJob
+from mrjob.step import MRStep
 import re
 import os
 import collections
 
-WORD_RE = re.compile(r"[\w*]+")
+MONGO_SERVER = os.environ.get('MONGO_SERVER')
+MONGO_SERVER_PORT = int(os.environ.get('MONGO_SERVER_PORT'))
+
+WORD_RE = re.compile(r"[\w*]+", re.MULTILINE)
 
 class MRWordFrequencyCount(MRJob):
 
@@ -40,7 +44,7 @@ class MRWordFrequencyCount(MRJob):
 		break
 	    index+=1;
 
-        yield (word, top10)
+        yield (word, P)
 
 
 if __name__ == '__main__':

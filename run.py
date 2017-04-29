@@ -11,5 +11,7 @@ def index ():
     form = SearchForm()
     return render_template("index.html", form=form)
 
+mongo = None #PyMongo(app)
+
 if __name__ == '__main__':
   app.run(debug = True, port = 3000) #Ejecuta el localhost
