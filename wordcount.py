@@ -12,6 +12,7 @@ class MRWordFrequencyCount(MRJob):
 	allnames = name.split('/')
 	name = allnames[len(allnames)-1]
 	H = {}
+	doc = doc.lower()
 	for word in WORD_RE.findall(doc):
 		H[word] = 0
 	for word in WORD_RE.findall(doc):
