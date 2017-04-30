@@ -9,7 +9,6 @@ para ello se implemento un algoritmo de busqueda para la analitica de texto.
 * Python 3.6
 * Mrjob
 * Flask 
-* MongoDB
 
 #### Correr el wordcount.py
 -Se descarga el dataset
