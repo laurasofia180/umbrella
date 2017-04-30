@@ -1,4 +1,3 @@
-from mongo import Mongo
 from mrjob.job import MRJob
 import re
 import os
