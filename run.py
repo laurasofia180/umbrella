@@ -1,5 +1,6 @@
 from flask import Flask, render_template
 from wtforms import Form, TextField, SelectField, validators
+#from flask_MySQLdb import MySQLdb
 
 app = Flask("umbrella") #nuevo objeto
 
@@ -11,6 +12,7 @@ def index ():
     form = SearchForm()
     return render_template("index.html", form=form)
 
+ #MySQLdb = None
 
 if __name__ == '__main__':
   app.run(debug = True, port = 3000) #Ejecuta el localhost
