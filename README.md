@@ -54,3 +54,15 @@ Ejemplo:
 ```
 $python umbrella/wordcount.py hdfs:/user/cmunozf/data_in/*.txt -r hadoop --output-dir hdfs:/user/cmunozf/data_out/out6
 ```
+
+-Esperar que se procesen los datos
+
+
+-Si se quiere copiar archivos del HDFS hacia local
+```
+$hdfs dfs -copyToLocal <directorio a copiar>/*.txt <directorio final>
+```
+Ejemplo
+```
+$hdfs dfs -copyToLocal /user/cmunozf/data_out/out6 /home/cmunozf/output
+```
