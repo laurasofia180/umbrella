@@ -6,10 +6,10 @@ Umbrella es una aplicacion de busqueda de archivos por medio de palabras claves 
 para ello se implemento un algoritmo de busqueda para la analitica de texto.
 
 #### Requisitos 
-* Python 3.6
+* Python 2.7.13
 * Mrjob
 * Flask 
-* MongoDB
+* MySQL-python-1.2.5
 
 #### Correr el wordcount.py
 -Se descarga el dataset
