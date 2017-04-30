@@ -9,6 +9,7 @@ para ello se implemento un algoritmo de busqueda para la analitica de texto.
 * Python 2.7.13
 * Mrjob
 * Flask 
+* MySQL-python-1.2.5
 
 #### Correr el wordcount.py
 -Se descarga el dataset
