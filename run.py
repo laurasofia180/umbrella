@@ -3,6 +3,13 @@ from wtforms import Form, TextField, SelectField, validators
 from flask_mysqldb import MySQL
 
 app = Flask("umbrella") #nuevo objeto
+
+app.config['MYSQL_DATABASE_USER'] = 'st0263'
+app.config['MYSQL_DATABASE_PASSWORD'] = 'st0263.2017'
+app.config['MYSQL_DATABASE_DB'] = 'st0263'
+app.config['MYSQL_DATABASE_HOST'] = '10.131.137.188'
+mysql.init_app(app)
+
 mysql = MySQL(app)
 
 class SearchForm(Form):
