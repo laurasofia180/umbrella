@@ -21,4 +21,4 @@ def words():
     return str(rv)
 
 if __name__ == '__main__':
-  app.run(debug = True, port = 3000,host="0.0.0.0") #Ejecuta el localhost
+  app.run(debug = True, port = 8002,host="10.131.137.188") #
