@@ -19,7 +19,6 @@ class MRWordFrequencyCount(MRJob):
 	for word in WORD_RE.findall(doc):
 		H[word] = H[word]+1
 	for word in H:
-		sys.stderr.write("MAPPER INPUT: ({0},{1})\n".format(name,H[word]))
 		yield(word,(name,H[word]))
 
     def reducer(self, word, values):
@@ -41,7 +40,6 @@ class MRWordFrequencyCount(MRJob):
 	    else:
 		break
 	    index+=1;
-	sys.stderr.write("REDUCER INPUT: ({0},{1})\n".format(word,top10))
         yield (word, top10)
 
 
