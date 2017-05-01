@@ -8,5 +8,7 @@ cursor.execute ("SELCT * FROM lmunozm") #query para ver la bd
 try:
     cursor.execute(sql)
     results = cursor.fetchall()
+    for row in results:
+        
 
 db.close()
