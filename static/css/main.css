@@ -1,37 +1,4 @@
-   *,*:after,*:before {
-     box-sizing:border-box;
-     -moz-box-sizing:border-box;
-     -webkit-box-sizing:border-box;
-   }
-
-   .cf:before,
-   .cf:after {
-       content:"";
-       display:table;
-   }
-   .cf:after {
-       clear:both;
-   }
-
-   body {
-     background: #DFE4CD;
-     color:black;
-   }
-
-   a,a:visited {
-     color: black;
-   }
-
-   h1 {
-       color: #293340;
-       text-align: center;
-       font: 60px/20px 'HelveticaNeue', Helvetica, Arial, sans-serif;
-   }
-
-   img{
-     max-width: 100%;
-   }
-
-   form{
-     font: black;
-   }
+.logo {
+    width: 20px;
+    height: 20px;
+}

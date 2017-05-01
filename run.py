@@ -1,30 +1,24 @@
 from flask import Flask, render_template
 from wtforms import Form, TextField, SelectField, validators
-from flask_mysqldb import MySQL
+import MySQLdb
 
 app = Flask("umbrella") #nuevo objeto
-
-app.config['MYSQL_DATABASE_USER'] = 'st0263'
-app.config['MYSQL_DATABASE_PASSWORD'] = 'st0263.2017'
-app.config['MYSQL_DATABASE_DB'] = 'st0263'
-app.config['MYSQL_DATABASE_HOST'] = '10.131.137.188'
-mysql.init_app(app)
-
-mysql = MySQL(app)
 
 class SearchForm(Form):
     text= TextField("text",[validators.required()])
 
-@app.route('/',methods=["GET"]) #wrap ruta donde puede acceder el usuario
+@app.route('/',methods=["GET"]) #Route for the index and search
 def index ():
     form = SearchForm()
     return render_template("index.html", form=form)
 
-def users():
-    cur = mysql.connection.cursor()
-    cur.execute('''SELECT lmunozm, host FROM mysql.lmunozm''')
+@app.route('/words',methods=["GET"]) #Route for all db content
+def words():
+    db = MySQLdb.connect(host="10.131.137.188", user="st0263", passwd="st0263.2017", db="st0263")
+    cur = db.cursor()
+    cur.execute(''' SELECT * FROM lmunozm ''')
     rv = cur.fetchall()
     return str(rv)
 
 if __name__ == '__main__':
-  app.run(debug = True, port = 3000) #Ejecuta el localhost
+  app.run(debug = True, port = 3000,host="0.0.0.0") #Ejecuta el localhost
