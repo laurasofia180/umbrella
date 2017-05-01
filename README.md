@@ -1,7 +1,6 @@
 Umbrella
 ==========
 #### Descripción
-
 Umbrella es una aplicacion de busqueda de archivos por medio de palabras claves ingresadas en la barra de busqueda,
 para ello se implemento un algoritmo de busqueda para la analitica de texto.
 
@@ -10,6 +9,15 @@ para ello se implemento un algoritmo de busqueda para la analitica de texto.
 * Mrjob
 * Flask 
 * Flask_mysqldb
+
+#### Ejecucion  
+Para correr la aplicacion desde consola se debe ejecutar el comando 
+* python run.py
+
+-para mandar los paqutes del HDFS a mysql se uso sqoop 
+```
+sqoop export \connect jdbc:mysql://10.131.137.188/st0263 \username st0263 \table lmunozm \ export-dir <directorio hdfs output>
+```
 
 #### Correr el wordcount.py
 -Se descarga el dataset
