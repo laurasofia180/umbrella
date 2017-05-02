@@ -10,6 +10,14 @@ para ello se implemento un algoritmo de busqueda para la analitica de texto.
 * Flask 
 * Flask_mysqldb
 
+#### Url de despliegue 
+```
+http://10.131.137.188:8002
+```
+### Funcionamiento 
+El proyecto cuenta con dos partes de gran impotacia como se indica en el grafico.
+![alt text](img=https://k61.kn3.net/F/B/B/B/A/C/6E2.png)
+
 #### Ejecucion  
 Para correr la aplicacion desde consola se debe ejecutar el comando 
 * python run.py
@@ -19,7 +27,7 @@ Para correr la aplicacion desde consola se debe ejecutar el comando
 sqoop export \connect jdbc:mysql://10.131.137.188/st0263 \username st0263 \table lmunozm \ export-dir <directorio hdfs output>
 ```
 
-#### Correr el wordcount.py
+#### Proceso ETL Wordcount
 -Se descarga el dataset
 ```
 $wget -w 2 -m -H "http://www.gutenberg.org/robot/harvest?filetypes[]=txt&langs[]=es"
