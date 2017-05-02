@@ -15,7 +15,7 @@ para ello se implemento un algoritmo de busqueda para la analitica de texto.
 http://10.131.137.188:8002
 ```
 ### Funcionamiento 
-El proyecto cuenta con dos partes de gran impotacia como se indica en el grafico.
+El proyecto cuenta con dos partes de gran importacia como se indica en el grafico.
 
 ![alt text](https://k61.kn3.net/F/B/B/B/A/C/6E2.png)
 
@@ -25,7 +25,7 @@ Para correr la aplicacion desde consola se debe ejecutar el comando
 
 -para mandar los paqutes del HDFS a mysql se uso sqoop 
 ```
-sqoop export \connect jdbc:mysql://10.131.137.188/st0263 \username st0263 \table lmunozm \ export-dir <directorio hdfs output>
+sqoop export —connect jdbc:mysql://10.131.137.188/st0263 —username st0263 —table lmunozm —export-dir <directorio hdfs output>
 ```
 
 #### Proceso ETL Wordcount
