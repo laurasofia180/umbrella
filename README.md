@@ -16,9 +16,9 @@ http://10.131.137.188:8002
 ```
 ### Funcionamiento 
 El proyecto cuenta con dos partes de gran impotacia como se indica en el grafico.
-```
+
 ![alt text](img=https://k61.kn3.net/F/B/B/B/A/C/6E2.png)
-```
+
 #### Ejecucion  
 Para correr la aplicacion desde consola se debe ejecutar el comando 
 * python run.py
